@@ -1,0 +1,17 @@
+# auth_service.yaml
+service.name: "auth"
+service.host: "127.0.0.1"
+service.port: "7777"
+
+registry.address: "192.168.0.3:8500"
+registry.tags:
+  - "traefik.enable=true"
+
+tokens.refresh-token-expires-duration: "168h"  # 7 * 24 hours
+tokens.access-token-expires-duration: "5m"     # 5 minutes
+tokens.refresh-token-max-age: 604800           # 7 * 24 * 3600 seconds
+tokens.access-token-max-age: 300               # 5 * 60 seconds
+
+# if we ever use lol
+ssl.server-crt-file: "server/server.crt"
+ssl.server-key-file: "server/server.key"
