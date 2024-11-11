@@ -1,6 +1,6 @@
 # auth_service.yaml
 service.name: "auth"
-service.host: "localhost"
+service.host: "letslive_auth"
 service.port: "7777"
 
 registry:
