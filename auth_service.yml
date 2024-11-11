@@ -22,7 +22,7 @@ ssl:
 database:
   user: postgres
   password: postgres
-  host: localhost
+  host: letslive_auth_db
   port: 5432
   name: letslive_auth
   params:
