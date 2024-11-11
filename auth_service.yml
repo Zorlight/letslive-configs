@@ -4,7 +4,7 @@ service.host: "127.0.0.1"
 service.port: "7777"
 
 registry:
-  address: "192.168.0.3:8500"
+  address: "172.17.0.1:8500"
   tags:
     - "traefik.enable=true"
 
