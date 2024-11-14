@@ -1,13 +1,9 @@
 # auth_service.yaml
-service.name: "auth"
-service.address: "letslive_auth:7777"
-service.host: "0.0.0.0"
-service.port: "7777"
-
-registry:
-  address: "172.17.0.1:8500"
-  tags:
-    - "traefik.enable=true"
+service:
+  name: "auth"
+  hostname: "letslive_auth"
+  apiBindAddress: "0.0.0.0" # allows all interfaces
+  apiPort: 7777 
 
 tokens:
   refresh-token-expires-duration: "168h"  # 7 * 24 hours

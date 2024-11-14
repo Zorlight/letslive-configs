@@ -1,0 +1,5 @@
+registry:
+  address: "consul:8500"
+  tags:
+    - "traefik.enable=true"
+

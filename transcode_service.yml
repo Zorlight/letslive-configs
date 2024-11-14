@@ -1,0 +1,46 @@
+service:
+  name: "transcode"
+  hostname: "letslive_transcode"
+  apiPort: 8080
+  rtmpBindAddress: "0.0.0.0"
+  port: "1935"
+
+rtmp:
+  port: 1935
+  userServiceAddress: http://letslive_user # to change user status (from offline to streaming)
+
+transcode:
+  publicHLSPath: public/hls
+  privateHLSPath: private/hls
+
+  ffmpegSetting:
+    ffmpegPath: /usr/bin/ffmpeg
+    masterFileName: index.m3u8
+    hlsTime: 2
+    crf: 21
+    preset: ultrafast
+    hlsListSize: 10
+    hlsMaxSize: 20
+
+    # adaptive bitrate streaming config
+    qualities:
+      - resolution: 640x360
+        maxBitrate: 365k
+        fps: 30
+        bufSize: 730k
+      - resolution: 1280x720
+        maxBitrate: 4.5M
+        fps: 60
+        bufSize: 9M
+      - resolution: 1920x1080
+        maxBitrate: 7.8M
+        fps: 60
+        bufSize: 15.6M
+
+ipfs:
+  enabled: true
+  gateway: http://nginx:8888 # the nginx server address (docker-compose.yaml file)
+  bootstrapNodeAddr: /ip4/10.5.0.2/tcp/4001/p2p/QmSHeyuLfNPnfG5S1JfJcgxPsVQ23u3JYWnRyYm4vkLGJb # use to connect this service (ipfs) to the network
+
+webserver:
+  port: 8889
