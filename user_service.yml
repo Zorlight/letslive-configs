@@ -1,0 +1,19 @@
+service:
+  name: "user"
+  hostname: "letslive_user" # used for docker compose specially
+  apiBindAddress: "0.0.0.0" # allows all interfaces
+  apiPort: 7777 
+
+# if we ever use lol
+ssl:
+  server-crt-file: "server/server.crt"
+  server-key-file: "server/server.key"
+
+database:
+  user: postgres
+  password: postgres
+  host: letslive_user_db
+  port: 5432
+  name: letslive_user
+  params:
+    - "sslmode=disable"
