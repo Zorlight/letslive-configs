@@ -10,6 +10,7 @@ ssl:
   server-key-file: "server/server.key"
 
 database:
+  migration-path: "/usr/src/app/auth/migrations"
   user: postgres
   password: postgres
   host: letslive_user_db
