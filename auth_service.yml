@@ -5,8 +5,6 @@ service:
   apiPort: 7777 
 
 tokens:
-  refresh-token-expires-duration: "168h"  # 7 * 24 hours
-  access-token-expires-duration: "5m"     # 5 minutes
   refresh-token-max-age: 604800           # 7 * 24 * 3600 seconds
   access-token-max-age: 300               # 5 * 60 seconds
 
