@@ -1,6 +1,6 @@
 service:
   name: "transcode"
-  hostname: "letslive_transcode"
+  hostname: "transcode"
   apiPort: 7779 # TODO: suppose to serve some api call like health check but it is belonging to "port" of webserver, needs adjusting
   rtmpBindAddress: "0.0.0.0"
   port: 1935

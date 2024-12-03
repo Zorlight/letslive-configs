@@ -1,6 +1,6 @@
 service:
   name: "user"
-  hostname: "letslive_user" # used for docker compose specially
+  hostname: "user" # used for docker compose specially
   apiBindAddress: "0.0.0.0" # allows all interfaces
   apiPort: 7778
 
