@@ -4,11 +4,6 @@ service:
   apiBindAddress: "0.0.0.0" # allows all interfaces
   apiPort: 7778
 
-# if we ever use lol
-ssl:
-  server-crt-file: "server/server.crt"
-  server-key-file: "server/server.key"
-
 database:
   migration-path: "/usr/src/app/user/migrations"
   user: postgres
@@ -18,3 +13,13 @@ database:
   name: letslive_user
   params:
     - "sslmode=disable"
+
+minio:
+  enabled: true
+  host: minio
+  port: 9000
+  clientHost: localhost
+  bucketName: "livestreams"
+  accessKey: "minioadmin"
+  secretKey: "minioadmin"
+

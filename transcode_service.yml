@@ -42,5 +42,14 @@ ipfs:
   gateway: http://localhost:8888 # the nginx server address (docker-compose.yaml file)
   bootstrapNodeAddr: /ip4/10.5.0.2/tcp/4001/p2p/QmSHeyuLfNPnfG5S1JfJcgxPsVQ23u3JYWnRyYm4vkLGJb # use to connect this service (ipfs) to the network
 
+minio:
+  enabled: true
+  host: minio
+  port: 9000
+  clientHost: localhost
+  bucketName: "livestreams"
+  accessKey: "minioadmin"
+  secretKey: "minioadmin"
+
 webserver:
   port: 8889
