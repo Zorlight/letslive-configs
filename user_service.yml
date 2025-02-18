@@ -17,7 +17,7 @@ database:
 minio:
   host: minio
   port: 9000
-  clientHost: localhost
+  clientHost: http://localhost
   accessKey: "minioadmin"
   secretKey: "minioadmin"
 

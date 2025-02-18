@@ -46,7 +46,7 @@ minio:
   enabled: true
   host: minio
   port: 9000
-  clientHost: localhost
+  clientHost: http://localhost
   bucketName: "livestreams"
   accessKey: "minioadmin"
   secretKey: "minioadmin"
