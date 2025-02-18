@@ -1,0 +1,16 @@
+service:
+  name: "livestream"
+  hostname: "livestream" # used for docker compose specially
+  apiBindAddress: "0.0.0.0" # allows all interfaces
+  apiPort: 7781
+
+database:
+  migration-path: "/usr/src/app/livestream/migrations"
+  user: postgres
+  password: postgres
+  host: letslive_livestream_db
+  port: 5432
+  name: letslive_livestream
+  params:
+    - "sslmode=disable"
+

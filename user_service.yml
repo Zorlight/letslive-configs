@@ -15,11 +15,9 @@ database:
     - "sslmode=disable"
 
 minio:
-  enabled: true
   host: minio
   port: 9000
   clientHost: localhost
-  bucketName: "livestreams"
   accessKey: "minioadmin"
   secretKey: "minioadmin"
 
