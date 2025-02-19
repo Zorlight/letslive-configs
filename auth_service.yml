@@ -23,5 +23,5 @@ database:
   params:
     - "sslmode=disable"
 
-verfication:
+verification:
   gateway: "http://localhost:8000"
