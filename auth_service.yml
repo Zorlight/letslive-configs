@@ -22,3 +22,6 @@ database:
   name: letslive_auth
   params:
     - "sslmode=disable"
+
+verfication:
+  gateway: "http://localhost:8000"
