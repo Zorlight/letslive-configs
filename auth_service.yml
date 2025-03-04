@@ -4,22 +4,20 @@ service:
   apiBindAddress: "0.0.0.0" # allows all interfaces
   apiPort: 7777 
 
-tokens:
+jwt:
   refresh-token-max-age: 604800           # 7 * 24 * 3600 seconds
   access-token-max-age: 300               # 5 * 60 seconds
-
-# if we ever use lol
-ssl:
-  server-crt-file: "server/server.crt"
-  server-key-file: "server/server.key"
+  consumer: "authenticated users"
+  issuer: "letslive"
+  subject: "auth"
 
 database:
   migration-path: "/usr/src/app/auth/migrations"
-  user: postgres
-  password: postgres
-  host: letslive_auth_db
+  user: "postgres"
+  password: "postgres"
+  host: "letslive_auth_db"
   port: 5432
-  name: letslive_auth
+  name: "letslive_auth"
   params:
     - "sslmode=disable"
 
